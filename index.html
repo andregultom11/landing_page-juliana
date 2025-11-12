@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>untuk juliana </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --light-gold: #F4E8C1;
+            --dark-gold: #B8860B;
+            --ivory: #FFFFF0;
+            --charcoal: #2C2C2C;
+            --light-charcoal: #3A3A3A;
+            --rose-gold: #B76E79;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background-color: #fefefe;
+            color: var(--charcoal);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        .luxury-bg {
+            background: linear-gradient(135deg, var(--ivory) 0%, #fefaf2 100%);
+            position: relative;
+        }
+        
+        .luxury-bg::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4af37' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.5;
+            z-index: 0;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 30px 0;
+            transition: all 0.5s ease;
+        }
+        
+        header.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 40px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--gold);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 120px 0 80px;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .hero-text {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: 64px;
+            font-weight: 500;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            color: var(--charcoal);
+        }
+        
+        .hero-title span {
+            color: var(--gold);
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hero-title span:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 8px;
+            bottom: 5px;
+            left: 0;
+            background-color: var(--light-gold);
+            z-index: -1;
+            opacity: 0.7;
+        }
+        
+        .hero-subtitle {
+            font-size: 22px;
+            font-weight: 300;
+            margin-bottom: 40px;
+            color: var(--light-charcoal);
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 15px 35px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--dark-gold) 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(212, 175, 55, 0.4);
+        }
+        
+        .hero-image {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+            transition: transform 0.5s ease;
+        }
+        
+        .hero-image:hover {
+            transform: perspective(1000px) rotateY(0) rotateX(0);
+        }
+        
+        .hero-image:before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            border: 2px solid var(--gold);
+            border-radius: 15px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+        
+        .photo-frame {
+            width: 100%;
+            height: 600px;
+            background: linear-gradient(45deg, #f5f2eb, #f9f6f0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .photo-frame:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Quote Section */
+        .quote-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--charcoal) 0%, var(--light-charcoal) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .quote-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .quote-icon {
+            font-size: 60px;
+            color: var(--gold);
+            margin-bottom: 40px;
+            opacity: 0.7;
+        }
+        
+        .quote-text {
+            font-size: 36px;
+            font-weight: 300;
+            line-height: 1.4;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+        
+        .quote-author {
+            font-size: 18px;
+            color: var(--light-gold);
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 2px;
+        }
+        
+        /* Message Section */
+        .message-section {
+            padding: 120px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            font-weight: 500;
+            margin-bottom: 80px;
+            color: var(--charcoal);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background-color: var(--gold);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .message-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .message-text {
+            font-size: 20px;
+            line-height: 1.8;
+            color: var(--light-charcoal);
+        }
+        
+        .message-text p {
+            margin-bottom: 30px;
+        }
+        
+        .highlight {
+            background-color: var(--light-gold);
+            padding: 0 5px;
+            font-style: italic;
+        }
+        
+        .signature {
+            margin-top: 40px;
+            text-align: right;
+        }
+        
+        .signature-name {
+            font-size: 24px;
+            color: var(--gold);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .signature-title {
+            font-size: 16px;
+            color: var(--light-charcoal);
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        /* Gallery Section */
+        .gallery-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #fdf8f3 0%, #f9f2e8 100%);
+        }
+        
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .gallery-item {
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Final Message Section */
+        .final-message {
+            padding: 150px 0;
+            background: linear-gradient(135deg, var(--rose-gold) 0%, #c58691 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .final-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .final-title {
+            font-size: 48px;
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+        
+        .final-text {
+            font-size: 22px;
+            line-height: 1.6;
+            margin-bottom: 50px;
+        }
+        
+        .final-button {
+            display: inline-block;
+            padding: 18px 45px;
+            background: white;
+            color: var(--rose-gold);
+            text-decoration: none;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .final-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--charcoal);
+            color: white;
+            padding: 80px 0 40px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-text {
+            font-size: 16px;
+            margin-bottom: 40px;
+            color: #ccc;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .footer-heart {
+            color: #ff6b6b;
+            margin: 0 5px;
+        }
+        
+        .copyright {
+            font-size: 14px;
+            color: #999;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+        
+        .delay-1 {
+            animation-delay: 0.3s;
+        }
+        
+        .delay-2 {
+            animation-delay: 0.6s;
+        }
+        
+        .delay-3 {
+            animation-delay: 0.9s;
+        }
+        
+        /* Floating Elements */
+        .floating-element {
+            position: absolute;
+            z-index: 1;
+        }
+        
+        .element-1 {
+            top: 10%;
+            left: 5%;
+            font-size: 30px;
+            color: var(--light-gold);
+            opacity: 0.5;
+        }
+        
+        .element-2 {
+            bottom: 20%;
+            right: 8%;
+            font-size: 40px;
+            color: var(--light-gold);
+            opacity: 0.3;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-content, .message-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-title {
+                font-size: 48px;
+            }
+            
+            .hero-image {
+                order: -1;
+                margin-bottom: 40px;
+            }
+            
+            .quote-text {
+                font-size: 28px;
+            }
+            
+            .gallery-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-title {
+                font-size: 36px;
+            }
+            
+            .photo-frame {
+                height: 400px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .final-title {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body class="luxury-bg">
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Juliana Sihotang</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#message">Pesan</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text fade-in">
+                    <h1 class="hero-title">rangkaian kata</h1>
+                    <p class="hero-subtitle delay-1">Ada kalanya aku ingin menyapa, tapi langkahku selalu berhenti di antara ragu dan takut.
+Bukan karena aku tidak berani, tapi karena aku menghargai caramu hidup tanpa harus terusik oleh rasa yang belum tentu kamu inginkan.
+Aku hanya seseorang yang diam-diam mengagumimu — dari kejauhan, dari sela-sela waktu, dan dari setiap pandangan singkat yang sempat bertemu.</p>
+                    <a href="#message" class="cta-button delay-2">Baca Pesan Khusus</a>
+                    <div class="floating-element element-1">✦</div>
+                </div>
+                <div class="hero-image fade-in delay-2">
+                    <div class="photo-frame">
+                        <!-- GANTI FOTO UTAMA DI SINI -->
+                        <img src="images/juli1.jpg" alt="Wanita Inspiratif">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote-container fade-in">
+                <div class="quote-icon">"</div>
+                <p class="quote-text">Ini bukan sebuah pengakuan, tapi sebuah perasaan.</p>
+                <p class="quote-author">Andre</p>
+            </div>
+        </div>
+        <div class="floating-element element-2">❦</div>
+    </section>
+
+    <!-- Message Section -->
+    <section class="message-section" id="message">
+        <div class="container">
+            <h2 class="section-title fade-in">Sebuah Pesan dari Hati</h2>
+            <div class="message-content">
+                <div class="message-image fade-in delay-1">
+                    <div class="photo-frame" style="height: 500px;">
+                        <!-- GANTI FOTO KEDUA DI SINI -->
+                        <img src="images/pesona.jpg" alt="Foto Kenangan">
+                    </div>
+                </div>
+                <div class="message-text fade-in delay-2">
+    <p>Di kampus, aku sering melihatmu lewat. Tidak pernah sengaja menunggu, tapi entah kenapa langkahmu selalu lebih dulu sampai di pikiranku sebelum mataku sempat mencari.</p>
+
+    <p>Aku terbiasa diam, bukan karena tak berani, tapi karena ada hal-hal yang lebih indah jika tetap disimpan. Seperti caraku memandangmu dari jauh—tanpa suara, tanpa rencana, hanya rasa yang tumbuh dengan tenang.</p>
+
+    <p>Kamu mungkin tak akan pernah tahu, dan aku pun tak akan memaksa waktu untuk memberi tahu. Cukup aku yang tahu bahwa di sela hari-hari sibuk ini, ada seseorang yang selalu tenang setiap kali melihatmu tersenyum.</p>
+
+    <div class="signature">
+        <div class="signature-name">Andre Blyhard Gultom</div>
+        <div class="signature-title"></div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title fade-in">Maaf sudah mengambil fotomu diam diam</h2>
+            <div class="gallery-container">
+                <div class="gallery-item fade-in delay-1">
+                    <!-- GANTI FOTO GALLERY 1 DI SINI -->
+                    <img src="/images/juliana.jpg" alt="Foto Gallery 1">
+                </div>
+                <div class="gallery-item fade-in delay-2">
+                    <!-- GANTI FOTO GALLERY 2 DI SINI -->
+                    <img src="/images/juli.jpg" alt="Foto Gallery 2">
+                </div>
+                <div class="gallery-item fade-in delay-3">
+                    <!-- GANTI FOTO GALLERY 3 DI SINI -->
+                    <img src="/images/juli1.jpg" alt="Foto Gallery 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Message Section -->
+    <section class="final-message" id="final">
+        <div class="container">
+            <div class="final-container fade-in">
+                <h2 class="final-title">....</h2>
+                <p class="final-text">Website ini mulai kubuat se waktu aku sudah mengetahui namamu </p>
+                <a href="#" class="final-button">juliana</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content fade-in">
+                <div class="footer-logo">Elegantia</div>
+                <p class="footer-text">Dibuat dengan <span class="footer-heart">❤</span> sebagai penghargaan untuk wanita luar biasa yang menginspirasi setiap hari.</p>
+                <p class="copyright">© 2023 Elegantia. Semua hak cipta dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Fade in elements on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Typing effect for hero title
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroTitle = document.querySelector('.hero-title');
+            const originalText = heroTitle.innerHTML;
+            
+            // Reset for animation
+            heroTitle.innerHTML = '';
+            let i = 0;
+            const typeWriter = () => {
+                if (i < originalText.length) {
+                    heroTitle.innerHTML += originalText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                }
+            };
+            
+            // Start typing effect after a short delay
+            setTimeout(typeWriter, 1000);
+        });
+    </script>
+</body>
+</html>
